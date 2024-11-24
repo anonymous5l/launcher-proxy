@@ -30,8 +30,6 @@ impl Module {
             .to_string();
             let index = *ordinal_base;
 
-            println!("{} {}", name, index);
-
             self.exports.insert(
                 name,
                 *(code_base.add(exports.AddressOfFunctions as usize) as *const usize)
